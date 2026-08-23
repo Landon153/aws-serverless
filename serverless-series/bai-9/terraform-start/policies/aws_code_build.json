@@ -1,0 +1,44 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "1",
+      "Effect": "Allow",
+      "Action": [
+        "sts:*",
+        "ecs:*",
+        "ecr:*",
+        "eks:DescribeCluster",
+        "codecommit:GitPull",
+        "cloudfront:CreateInvalidation",
+        "lambda:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "2",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetBucketAcl",
+        "logs:CreateLogGroup",
+        "logs:PutLogEvents",
+        "codebuild:CreateReportGroup",
+        "codebuild:CreateReport",
+        "s3:PutObject",
+        "s3:GetObject",
+        "logs:CreateLogStream",
+        "codebuild:UpdateReport",
+        "codebuild:BatchPutCodeCoverages",
+        "codebuild:BatchPutTestCases",
+        "s3:GetBucketLocation",
+        "s3:GetObjectVersion"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "codestar-connections:UseConnection",
+      "Resource": "arn:aws:codestar-connections:*:*:connection/*"
+    }
+  ]
+}
