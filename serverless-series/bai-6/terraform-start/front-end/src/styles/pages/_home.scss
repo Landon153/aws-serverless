@@ -1,0 +1,11 @@
+.home, .sample {
+  margin: 20px;
+}
+
+.home {
+  .books {
+    .ant-avatar-square {
+      height: 100%;
+    }
+  }
+}
